@@ -1,0 +1,34 @@
+{
+  "command-line": "python wrapper.py IJ_RADIUS IJ_THRESHOLD ",
+  "inputs": [
+    {
+      "default-value": 5,
+      "name": "Radius",
+      "description": "Radius for Laplacian filter",
+      "set-by-server": false,
+      "value-key": "@ID",
+      "optional": true,
+      "id": "ij_radius",
+      "type": "Number",
+      "command-line-flag": "--@id"
+    },
+    {
+      "default-value": -0.5,
+      "name": "Threshold",
+      "description": "Segmentation threshold",
+      "set-by-server": false,
+      "value-key": "@ID",
+      "optional": true,
+      "id": "ij_threshold",
+      "type": "Number",
+      "command-line-flag": "--@id"
+    }
+  ],
+  "name": "NucleiSegmentation-ImageJ",
+  "description": "Segment clustered nuclei using a laplacian filter, thresholding and a binary watershed transform",
+  "schema-version": "cytomine-0.1",
+  "container-image": {
+    "image": "neubiaswg5/nucleisegmentation-imagej",
+    "type": "singularity"
+  }
+}
